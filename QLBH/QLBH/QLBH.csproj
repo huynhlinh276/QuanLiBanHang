@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F45AD03D-2E48-470B-B384-6EA8C817D920}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLBH</RootNamespace>
+    <AssemblyName>QLBH</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Connection.cs" />
+    <Compile Include="Classes\Data.cs" />
+    <Compile Include="Classes\DoanhThu.cs" />
+    <Compile Include="Forms\HoaDon\Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HoaDon\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChiTietHoaDon\BillDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChiTietHoaDon\BillDetail.Designer.cs">
+      <DependentUpon>BillDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChiTietHoaDon\BillDetailUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChiTietHoaDon\BillDetailUpdate.Designer.cs">
+      <DependentUpon>BillDetailUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HoaDon\BillUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HoaDon\BillUpdate.Designer.cs">
+      <DependentUpon>BillUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home\ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home\ChangePass.Designer.cs">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KhachHang\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KhachHang\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KhachHang\CustomerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KhachHang\CustomerUpdate.Designer.cs">
+      <DependentUpon>CustomerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Forms\Home\ManageData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home\ManageData.Designer.cs">
+      <DependentUpon>ManageData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SanPham\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SanPham\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SanPham\ProductUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SanPham\ProductUpdate.Designer.cs">
+      <DependentUpon>ProductUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home\Revenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home\Revenue.Designer.cs">
+      <DependentUpon>Revenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuNhap\RevenueDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuNhap\RevenueDay.Designer.cs">
+      <DependentUpon>RevenueDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuNhap\RevenueMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuNhap\RevenueMonth.Designer.cs">
+      <DependentUpon>RevenueMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuNhap\RevenueYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuNhap\RevenueYear.Designer.cs">
+      <DependentUpon>RevenueYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanVien\Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanVien\Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NhanVien\StaffUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NhanVien\StaffUpdate.Designer.cs">
+      <DependentUpon>StaffUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Solve.cs" />
+    <Compile Include="Classes\Test.cs" />
+    <Compile Include="Classes\Transporter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\HoaDon\Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChiTietHoaDon\BillDetail.resx">
+      <DependentUpon>BillDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChiTietHoaDon\BillDetailUpdate.resx">
+      <DependentUpon>BillDetailUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HoaDon\BillUpdate.resx">
+      <DependentUpon>BillUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home\ChangePass.resx">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KhachHang\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KhachHang\CustomerUpdate.resx">
+      <DependentUpon>CustomerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home\ManageData.resx">
+      <DependentUpon>ManageData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SanPham\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SanPham\ProductUpdate.resx">
+      <DependentUpon>ProductUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home\Revenue.resx">
+      <DependentUpon>Revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuNhap\RevenueDay.resx">
+      <DependentUpon>RevenueDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuNhap\RevenueMonth.resx">
+      <DependentUpon>RevenueMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuNhap\RevenueYear.resx">
+      <DependentUpon>RevenueYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanVien\Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NhanVien\StaffUpdate.resx">
+      <DependentUpon>StaffUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic053.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic054.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic055.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic062.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic09.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palet03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login021.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-icon-vector-733219.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic051.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
